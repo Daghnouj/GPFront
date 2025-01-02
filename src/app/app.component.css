@@ -1,0 +1,54 @@
+/* Container principal */
+.app-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* En-tête */
+  header h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    color: #007bff;
+  }
+  
+  .navigation a.active {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  /* Contenu principal */
+  main {
+    margin-top: 20px;
+  }
+  
+  /* Pied de page */
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #999;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  

@@ -1,0 +1,26 @@
+<div class="modifier-produit-container">
+  <h2 class="title">Modifier un Produit</h2>
+  <form (ngSubmit)="modifierProduit()" class="form-container">
+    <div>
+      <label for="nom" class="label">Nom :</label>
+      <input id="nom" [(ngModel)]="produit.nom" name="nom" required class="input-field" />
+    </div>
+
+    <div>
+      <label for="prix" class="label">Prix :</label>
+      <input id="prix" type="number" [(ngModel)]="produit.prix" name="prix" required class="input-field" />
+    </div>
+
+    <div>
+      <label for="categorie" class="label">Catégorie :</label>
+      <input id="categorie" [(ngModel)]="produit.categorie" name="categorie" required class="input-field" />
+    </div>
+
+    <button type="submit" class="submit-btn">Modifier</button>
+  </form>
+
+  <!-- Affichage du message d'erreur -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

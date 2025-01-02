@@ -1,0 +1,34 @@
+<div class="liste-produit-container">
+  <h2 class="title">Liste des Produits</h2>
+  
+  <!-- Message de succès -->
+  <div *ngIf="successMessage" class="alert alert-success" role="alert">
+    {{ successMessage }}
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr class="table-header">
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Catégorie</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produits" class="table-row">
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.prix }}</td>
+          <td>{{ produit.categorie }}</td>
+          <td>
+            <button [routerLink]="['/produits', produit._id]" class="details-btn">Détails</button>
+            <button [routerLink]="['/produits/modifier', produit._id]" class="modify-btn">Modifier</button>
+            <button (click)="supprimerProduit(produit._id)" class="delete-btn">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button [routerLink]="['/produits/ajouter']" class="add-btn">Ajouter Produit</button>
+  </div>
+</div>

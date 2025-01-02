@@ -1,0 +1,10 @@
+<div *ngIf="produit" class="details-produit-container">
+    <h2 class="title">Détails du Produit</h2>
+    <div class="details-container">
+      <p class="details-text"><strong>Nom :</strong> {{ produit.nom }}</p>
+      <p class="details-text"><strong>Prix :</strong> {{ produit.prix }}</p>
+      <p class="details-text"><strong>Catégorie :</strong> {{ produit.categorie }}</p>
+      <button (click)="retourALaListe()" class="return-btn">Retour à la liste</button>
+    </div>
+  </div>
+  
